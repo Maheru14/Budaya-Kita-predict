@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "budayakita",
+  "private_key_id": "ee43787c95c1eb6f09e2bf89157717f5cfefab42",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCo9s5KPMNypXIV\nmAQKAplRKeAWcJYsAh9FHfx44q8N6zax8szNpLAPE+74gHf1asuyqAnXBNFyHqcW\nI0mQBgwoKJwX7FKrNstYbgn6zc3CMLEeG8fIKrpt0VGJoV9tuPIAaNEbk9VvaBN9\nJ/W07kL6JIOy5TiwzUBU9u3N72PPVgf6ytGsQ/xyA1LbIU5vqWWjeOu2LGc3HP86\nXnW8s/bcf+XrOzKzT0m1p6mojhMDLr1f1npXZrr307rj3L/xlZ/K+8to5Yc+y+Cf\nRZODLPlxpsJuM0AbUV0msspNV9poarywvw1fkbAEhMIYiqsWVK616vDjI4FHAb3+\nMb4hQEjFAgMBAAECggEASGVLmYp0khxqh+8VF/bqG1kub175MU0Nee9xvJggOn4E\ndvWaJCjC2QsI8wgUnh6OvfN7F9q0JUoV/InNHL1CmzhfPW7gMwUs1qx7cS+aUHDN\niyGLFeyc6a3s2mQ+/8PlSSCgLElJA82bwB4NjOMj5osbtNy7UCH5xQ3ycbD3WqAF\nx2xG8d/vAV8mh1BA4QJR9mQAqbIZAQBgQCRve1BzYF+VIVTsS+peIHK5ayH5oQCD\njFwmoC9M4O7PO4IWjGppup6pK5P+OL1I3UtJM5/4MRPHf0+C96bImNpv4iapJdbj\necHFGWF0ftH7QHK3dkM2iHTyua++bDrkwNG9UI+cZwKBgQDtl3dk2mFEgzlco5wL\ncrf9j6xtUWCshrVz82bUAcPOQEXCgRIsTbheuw1xO9JeI7DctWO1CvLukfmjpVk0\nkqW582m3oh+veXFp5N1fBEMDHAibaA0rSYO7Vf9lCC7mpla06t7gAkJSbLkqfwRt\nnWEoxDhZl2qALInM+VwRAXMbbwKBgQC2DiOxB3vGP2fvmmNVErY0C/V0TxUHoyG4\nz2VvovPtN4eQ5Il92o36h27lDxHca9YtKizfnYcAh37EkSYVqBuPiNOa5YtpWj8T\nkM+cVKNyV9xZnt7o4WBy6Kne/9dVKjjQK1B7X8/iVC1lGUM3IcyQqewkie0Dh1Yt\nmgPWUdIVCwKBgQCCN6TRWrs6wK0cr/MjdyGOUENRuutAQ6iJv1qZUcpObX2OaA1c\nyNAG44Avknju7aLOpH/cRv70cH8hCMvGe6VnMBi985ZoJyhYwH3vyLctqhyxiCrH\nkcgoUa7jYcPK2FnnWF8E6VgOMtadivYTWdFZdYno2Isfasmv1O93xpKe8wKBgFXY\nbv4QEE5YIbN68nHwI9iA9xoEHF+AjesuaJ9ukGUANT2edjLRNve2mxUJuRteAh1D\n8Or0xe769UzNQM8fePeCxn0Y1lc0Rd/8/diylGvbgD0GTAg2Fhu5GDjeHPS8txN6\nCTZT5JvNo6Yzdl1t458ncQF9xDRQwdM496w84ronAoGAQC4WhvBNJpbM8ssyLTMw\ntdCwxiQq3S3ORmdNXcVGPGKE5W9fue4djWx74GdTqLunVvDfby4oxYeZ9AkOGq7f\nizlxwiCJCuP1Os9omjwkhvO5FM4/EkJZnLIPWADuM0ZGmMdHXLt0uOPQGR5smRAM\nAsMsjwnL/+hhdXrBrh4/woU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "budayakita-service-account@budayakita.iam.gserviceaccount.com",
+  "client_id": "103259061369024731012",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/budayakita-service-account%40budayakita.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
