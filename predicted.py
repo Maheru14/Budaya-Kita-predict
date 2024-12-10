@@ -8,10 +8,9 @@ from PIL import Image
 from io import BytesIO
 import os
 
-
 app = Flask(__name__)
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/dianmaheru/Documents/Prediksi_budaya/budayakita-403c5ab386ad.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/dianmaheru/Documents/Prediksi_budaya/budayakita-ee43787c95c1.json"
 BUCKET_NAME = "bucket-budayakita"
 db = firestore.Client(database="budayakitadb")
 
@@ -34,6 +33,23 @@ labels = {
     12: "Batik Sidoluhur",
     13: "Batik Tambal",
     14: "Batik Truntum"
+}
+deskripsiList = {
+    0: "Batik Celup adalah jenis batik yang dihasilkan melalui teknik pencelupan kain ke dalam larutan warna tertentu. Teknik ini sering dikaitkan dengan motif abstrak atau corak sederhana. Batik ini populer di berbagai daerah, terutama di Jawa.",
+    1: "Batik Cendrawasih berasal dari Papua, menggambarkan keindahan burung Cendrawasih yang menjadi simbol kebanggaan wilayah tersebut. Motif ini sering memadukan warna cerah dan elemen alam Papua.",
+    2: "Batik Dayak berasal dari Kalimantan dengan motif yang terinspirasi dari seni ukir suku Dayak. Motifnya sering berupa pola geometris atau gambar flora dan fauna khas Kalimantan.",
+    3: "Batik Geblek Renteng berasal dari Kulon Progo, Yogyakarta. Motifnya terinspirasi dari makanan khas setempat bernama geblek dan memiliki pola rantai (renteng) yang melambangkan persatuan dan kerja sama.",
+    4: "Batik Insang berasal dari Kalimantan Timur. Motifnya terinspirasi dari insang ikan, yang menggambarkan kedekatan masyarakat setempat dengan budaya maritim.",
+    5: "Batik Kawung adalah salah satu motif batik tertua di Indonesia, berasal dari Jawa. Motifnya menyerupai biji buah kawung (aren), melambangkan kesucian dan kebijaksanaan.",
+    6: "Batik Lasem berasal dari daerah Lasem, Jawa Tengah. Motifnya dipengaruhi oleh budaya Tionghoa dengan warna-warna cerah seperti merah dan biru, serta pola seperti bunga dan naga.",
+    7: "Batik Megamendung berasal dari Cirebon. Motifnya menyerupai awan mendung dengan gradasi warna. Motif ini melambangkan ketenangan dan kesejukan.",
+    8: "Batik Parang adalah motif khas Jawa yang melambangkan perjuangan dan semangat pantang menyerah. Motifnya menyerupai garis-garis diagonal seperti ombak laut.",
+    9: "Batik Poleng berasal dari Bali, dengan motif kotak-kotak hitam dan putih. Motif ini melambangkan keseimbangan antara dua kekuatan, baik dan buruk.",
+    10: "Batik Pring berasal dari Magetan, Jawa Timur. Motifnya menggambarkan bambu (pring) yang melambangkan kehidupan sederhana dan kekuatan.",
+    11: "Batik Sekar adalah motif batik dengan pola bunga (sekar) yang melambangkan keindahan dan kesuburan. Motif ini ditemukan di berbagai daerah di Jawa.",
+    12: "Batik Sidoluhur berasal dari Solo, Jawa Tengah. Motif ini melambangkan harapan untuk mencapai kehidupan yang luhur dan penuh kebajikan.",
+    13: "Batik Tambal adalah motif batik yang terdiri dari berbagai pola kecil yang disusun menjadi satu. Motif ini melambangkan usaha untuk memperbaiki diri dan kehidupan.",
+    14: "Batik Truntum adalah motif batik dari Solo yang diciptakan oleh permaisuri Raja Paku Buwono III. Motif ini melambangkan cinta yang tumbuh kembali dan hubungan yang harmonis."
 }
 
 def format_label_folder(label):
@@ -74,6 +90,7 @@ def predict_image():
         predicted_label = np.argmax(predictions)
         confidence = predictions[0][predicted_label]
         label_name = labels[predicted_label]
+        deskripsi = deskripsiList[predicted_label]
 
         client = storage.Client()
         bucket = client.bucket(BUCKET_NAME)
@@ -89,6 +106,7 @@ def predict_image():
         doc_ref = db.collection('predictions').document()
         doc_ref.set({
             "label_name": label_name,
+            "deskripsi": deskripsi,
             "file_url": file_url,
             "filename": file.filename,
             "user_id": request.form.get("user_id"),
@@ -97,6 +115,7 @@ def predict_image():
 
         return jsonify({
             "prediction": label_name,
+            "deskripsi": deskripsi,
             "confidence": float(confidence),
             "file_url": file_url,
             "user_id": request.form.get("user_id"),
