@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/dianmaheru/Documents/Prediksi_budaya/budayakita-ee43787c95c1.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/dianmaheru/Documents/Prediksi_budaya/budayakita-690e5dcb36ab.json"
 BUCKET_NAME = "bucket-budayakita"
 db = firestore.Client(database="budayakitadb")
 
