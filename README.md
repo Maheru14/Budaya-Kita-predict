@@ -19,6 +19,7 @@
 {
   "confidence": float,
     "created_at": datetime,
+    "deskripsi": string,
     "file_url": string,
     "prediction": string,
     "user_id": string
@@ -46,6 +47,7 @@
     "history": [
         {
             "created_at": datetime,
+            "deskripsi": string,
             "file_url": string,
             "filename": string,
             "label_name": string,
